@@ -46,40 +46,6 @@ The service is a solution to automate this process to make it easy and simple.
 | `organization` | Client organization.       |
 | `orders`       | Vector of orders.          |
 
-### `https://labels.readjarapis.net/products`
-
-**during development**
-
-```json
-{
-    "organization": "example",
-    "api-client": {
-        "code": "shop1"
-    },
-    "lang": "en",
-    "products": [
-        {
-            "label-template": "main",
-            "name": "English name",
-            "ingredients": "kamut wheat, sugar, rye, salt, peanuts",
-            "countries-of-origin": "Poland, Germany",
-            "expiry-days": 365,
-            "unit": "kg",
-            "quantity": 1.23
-        }
-    ]
-}
-```
-
-| Name           | Description                 |
-| -------------- | --------------------------- |
-| `api-client`   | Map of client information.  |
-| `organization` | Client organization.        |
-| `lang`         | Language to generate label. |
-| `products`     | Vector of products.         |
-
-### Fields description
-
 #### api-client
 
 | Name   | Description                          |
@@ -119,8 +85,14 @@ You get PDF files to download. Keep in mind files have limited Time To Live, so 
 }
 ```
 
-**Why many files?**
+## FAQ
+
+### Why response return many files?
 
 Let's imagine that you want to use different labels sizes for different products. If you put all labels into one file, then you will have an issue to print them properly. There will be the same issue for grayscale and colour labels or other technical demands, which should be printed on different printers.
 
 The solution is to generate separate files to print each file on different printer.
+
+### How to generate labels for products without orders?
+
+Set `order` / `code` as `null`.
