@@ -12,11 +12,11 @@ The service is a solution to automate this process to make it easy and simple.
 
 ### `https://labels.readjarapis.net/orders`
 
-[request-orders.json](request-orders.json) - full example
+- [request-orders.json](request-orders.json)
+- [request-orders.json](request-products.json)
 
 ```json
 {
-    "organization": "example",
     "api-client": {
         "code": "shop1"
     },
@@ -26,7 +26,7 @@ The service is a solution to automate this process to make it easy and simple.
             "lang": "en",
             "products": [
                 {
-                    "label-template": "main",
+                    "label-template": "organization/template",
                     "name": "English name",
                     "ingredients": "kamut wheat, sugar, rye, salt, peanuts",
                     "countries-of-origin": "Poland, Germany",
@@ -40,11 +40,10 @@ The service is a solution to automate this process to make it easy and simple.
 }
 ```
 
-| Name           | Description                |
-| -------------- | -------------------------- |
-| `api-client`   | Map of client information. |
-| `organization` | Client organization.       |
-| `orders`       | Vector of orders.          |
+| Name         | Description                |
+| ------------ | -------------------------- |
+| `api-client` | Map of client information. |
+| `orders`     | Vector of orders.          |
 
 #### api-client
 
@@ -64,7 +63,7 @@ The service is a solution to automate this process to make it easy and simple.
 
 | Name                  | Description                            |
 | --------------------- | -------------------------------------- |
-| `label-template`      | Name of template to use.               |
+| `label-template`      | Name of the template to use.           |
 | `name`                | Product name.                          |
 | `ingredients`         | Product ingredients.                   |
 | `countries-of-origin` | Countries of origin.                   |

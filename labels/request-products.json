@@ -1,0 +1,31 @@
+{
+    "api-client": {
+        "code": "shop1"
+    },
+    "orders": [
+        {
+            "code": null,
+            "lang": "en",
+            "products": [
+                {
+                    "label-template": "etingroup/main",
+                    "name": "English name",
+                    "ingredients": "pszenica kamut, cukier, żyto, sól, orzeszki ziemne",
+                    "countries-of-origin": "Poland",
+                    "expiry-days": 365,
+                    "unit": "kg",
+                    "quantity": 1.23
+                },
+                {
+                    "label-template": "etingroup/yms",
+                    "name": "Tea",
+                    "ingredients": "skórka pomarańczy, imbir, cynamon, goźdźik, szałwia lekarska, koper włoski, korzeń lukrecji, kardamon, czarny pieprz, korzeń miniszka lekarskiego, owoc jałowca, korzeń dźięgielowy, korzeń sarsa parilla, kolendra, nać pietruszki, korzeń szafranu",
+                    "countries-of-origin": "China",
+                    "expiry-days": 7,
+                    "unit": "szt.",
+                    "quantity": 1
+                }
+            ]
+        }
+    ]
+}
