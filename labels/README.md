@@ -13,7 +13,7 @@ The service is a solution to automate this process to make it easy and simple.
 ### `https://labels.readjarapis.net/orders`
 
 - [request-orders.json](request-orders.json)
-- [request-orders.json](request-products.json)
+- [request-products.json](request-products.json)
 
 ```json
 {
@@ -94,4 +94,4 @@ The solution is to generate separate files to print each file on different print
 
 ### How to generate labels for products without orders?
 
-Set `order` / `code` as `null`.
+Do not set in request `order` / `code`.
