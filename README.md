@@ -14,7 +14,7 @@ Documentation contains examples of requests to let you fast prgoress. You can ru
 
 ```bash
 git clone git@github.com:kwladyka/doc-redjar-net.git
-curl -H "Content-Type: application/json" -d @service/request.json -i https://service.redjarapis.net
+curl -H "Content-Type: application/json" -d @service/request.json -i https://service.redjarapis.net/action
 ```
 
 ## Response

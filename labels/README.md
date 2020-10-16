@@ -24,15 +24,21 @@ The service is a solution to automate this process to make it easy and simple.
         {
             "code": "123",
             "lang": "en",
+            "contractor": {"code": "123"}
             "products": [
                 {
                     "label-template": "organization/template",
+                    "code": "123",
                     "name": "English name",
                     "ingredients": "kamut wheat, sugar, rye, salt, peanuts",
                     "countries-of-origin": "Poland, Germany",
                     "expiry-days": 365,
                     "unit": "kg",
-                    "quantity": 1.23
+                    "quantity": 1.23,
+                    "custom": {
+                        "unique-id": "pink",
+                        "unique-id2": 3
+                    }
                 }
             ]
         }
@@ -41,35 +47,44 @@ The service is a solution to automate this process to make it easy and simple.
 ```
 
 | Name         | Description                |
-| ------------ | -------------------------- |
+|--------------|----------------------------|
 | `api-client` | Map of client information. |
 | `orders`     | Vector of orders.          |
 
 #### api-client
 
 | Name   | Description                          |
-| ------ | ------------------------------------ |
+|--------|--------------------------------------|
 | `code` | Unique identifier for client system. |
 
 #### orders
 
-| Name       | Description                                 |
-| ---------- | ------------------------------------------- |
-| `code`     | Unique identifier for client requested API. |
-| `lang`     | Language to generate label.                 |
-| `products` | Vector of products.                         |
+| Name         | Description                                 |
+|--------------|---------------------------------------------|
+| `code`       | Unique identifier for client requested API. |
+| `lang`       | Language to generate label.                 |
+| `contractor` | Contractor data.                            |
+| `products`   | Vector of products.                         |
+
+#### contractor
+
+| Name   | Description                       |
+|--------|-----------------------------------|
+| `code` | Unique identifier for contractor. |
 
 #### products
 
-| Name                  | Description                            |
-| --------------------- | -------------------------------------- |
-| `label-template`      | Name of the template to use.           |
-| `name`                | Product name.                          |
-| `ingredients`         | Product ingredients.                   |
-| `countries-of-origin` | Countries of origin.                   |
-| `expiry-days`         | Number of days to add to current date. |
-| `unit`                | Unit.                                  |
-| `quantity`            | Quantity.                              |
+| Name                  | Description                                                                                                                                                                 |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `label-template`      | Name of the template to use.                                                                                                                                                |
+| `code`                | Unique identifier for product.                                                                                                                                              |
+| `name`                | Product name.                                                                                                                                                               |
+| `ingredients`         | Product ingredients.                                                                                                                                                        |
+| `countries-of-origin` | Countries of origin.                                                                                                                                                        |
+| `expiry-days`         | Number of days to add to current date.                                                                                                                                      |
+| `unit`                | Unit.                                                                                                                                                                       |
+| `quantity`            | Quantity.                                                                                                                                                                   |
+| `custom`              | This can be whatever data structure. The `custom` data is not validated. The intention is to let third party systems send data unique only for them or for specific client. |
 
 ## Response
 
@@ -94,4 +109,4 @@ The solution is to generate separate files to print each file on different print
 
 ### How to generate labels for products without orders?
 
-Do not set in request `order` / `code`.
+Do not send in request `order` / `code` field.
