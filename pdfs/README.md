@@ -75,10 +75,10 @@ The service is a solution to automate this process to make it easy and simple.
 |--------------|---------------------------------------------|
 | `code`       | Unique identifier for client requested API. |
 | `lang`       | Language to generate label.                 |
-| `contractor` | Contractor data.                            |
+| `buyer`      | Buyer contractor data.                      |
 | `products`   | Vector of products.                         |
 
-#### contractor
+#### buyer
 
 | Name   | Description                       |
 |--------|-----------------------------------|
