@@ -1,43 +1,54 @@
-# API labels [**DEPRECATED**]
+# API pdfs
 
-Service to generate labels for orders.
+Service to generate pdfs from prepared templates using data in API request.
 
 ## Rationale
 
-Companies need to label products which they sell with data like: producer, ingredients (with allegrens), expiry date etc. This process is time consuming and it is easy to make a mistake and risk penalties. People have many technical issues to prepare up to date labels for products.
+Companies need to generate pdfs for different purposes. Currently focus on labels for products containing data like: producer, ingredients (with allegrens), expiry date etc. This process is time consuming and it is easy to make a mistake and risk penalties. People have many technical issues to prepare up to date labels for products.
 
 The service is a solution to automate this process to make it easy and simple.
 
 ## Request
 
-### `https://labels.readjarapis.net/orders`
+### `https://pdfs.readjarapis.net/generate`
 
 - [request-orders.json](request-orders.json)
 - [request-products.json](request-products.json)
 
 ```json
 {
+    "data-structure": "atomstore/labels",
     "api-client": {
         "code": "shop1"
     },
     "orders": [
         {
-            "code": "123",
+            "code": "34524",
             "lang": "en",
-            "contractor": {"code": "123"}
+            "buyer": {
+                "code": "34589"
+            },
             "products": [
                 {
-                    "label-template": "organization/template",
-                    "code": "123",
-                    "name": "English name",
-                    "ingredients": "kamut wheat, sugar, rye, salt, peanuts",
-                    "countries-of-origin": "Poland, Germany",
-                    "expiry-days": 365,
+                    "pdf-template": "examples/products",
+                    "name": "Product name",
                     "unit": "kg",
-                    "quantity": 1.23,
+                    "quantity": 1.5,
                     "custom": {
-                        "unique-id": "pink",
-                        "unique-id2": 3
+                        "ingredients": "kamut wheat, sugar, rye, salt, peanuts",
+                        "countries-of-origin": "Poland",
+                        "expiry-days": 365
+                    }
+                },
+                {
+                    "pdf-template": "examples/products",
+                    "name": "Tea",
+                    "unit": "pcs",
+                    "quantity": 1,
+                    "custom": {
+                        "ingredients": "orange peel, ginger, cinnamon, clove, sage, fennel, licorice root, cardamom, black pepper, miniscus root, juniper fruit, ginger root, sars parilla root, coriander, parsley root, saffron root",
+                        "countries-of-origin": "China",
+                        "expiry-days": 30
                     }
                 }
             ]
@@ -46,10 +57,11 @@ The service is a solution to automate this process to make it easy and simple.
 }
 ```
 
-| Name         | Description                |
-|--------------|----------------------------|
-| `api-client` | Map of client information. |
-| `orders`     | Vector of orders.          |
+| Name             | Description                                                                                                                            |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| `data-structure` | Unique identifier for data which are send to API. For example `atomstore/labels` is structure for atomstore system for labels purpose. |
+| `api-client`     | Map of client information.                                                                                                             |
+| `orders`         | Vector of orders.                                                                                                                      |
 
 #### api-client
 
@@ -93,8 +105,8 @@ You get PDF files to download. Keep in mind files have limited Time To Live, so 
 ```json
 {
     "files": [
-        "https://api.redjar.net/files/ee8f7220-b8ae-11ea-8c2d-31c4e434e2af.pdf",
-        "https://api.redjar.net/files/f3d95bb0-b8ae-11ea-8c2d-31c4e434e2af.pdf"
+        "https://pdfs.redjarapis.net/files/ee8f7220-b8ae-11ea-8c2d-31c4e434e2af.pdf",
+        "https://pdfs.redjarapis.net/files/f3d95bb0-b8ae-11ea-8c2d-31c4e434e2af.pdf"
     ]
 }
 ```

@@ -14,7 +14,11 @@
                     "countries-of-origin": "Poland",
                     "expiry-days": 365,
                     "unit": "kg",
-                    "quantity": 1.23
+                    "quantity": 1.23,
+                    "custom": {
+                        "unique-id": "pink",
+                        "unique-id2": 3
+                    }
                 },
                 {
                     "label-template": "etingroup/main",

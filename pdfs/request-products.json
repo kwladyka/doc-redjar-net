@@ -1,0 +1,35 @@
+{
+    "data-structure": "atomstore/labels",
+    "api-client": {
+        "code": "shop1"
+    },
+    "orders": [
+        {
+            "lang": "en",
+            "products": [
+                {
+                    "pdf-template": "examples/products",
+                    "name": "English name",
+                    "unit": "kg",
+                    "quantity": 1.23,
+                    "custom": {
+                        "ingredients": "pszenica kamut, cukier, żyto, sól, orzeszki ziemne",
+                        "countries-of-origin": "Poland",
+                        "expiry-days": 365
+                    }
+                },
+                {
+                    "pdf-template": "examples/tickets",
+                    "name": "Tea",
+                    "unit": "szt.",
+                    "quantity": 1,
+                    "custom": {
+                        "ingredients": "skórka pomarańczy, imbir, cynamon, goźdźik, szałwia lekarska, koper włoski, korzeń lukrecji, kardamon, czarny pieprz, korzeń miniszka lekarskiego, owoc jałowca, korzeń dźięgielowy, korzeń sarsa parilla, kolendra, nać pietruszki, korzeń szafranu",
+                        "countries-of-origin": "China",
+                        "expiry-days": 7
+                    }
+                }
+            ]
+        }
+    ]
+}

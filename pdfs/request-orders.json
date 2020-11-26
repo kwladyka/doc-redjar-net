@@ -1,0 +1,101 @@
+{
+    "data-structure": "atomstore/labels",
+    "api-client": {
+        "code": "shop1"
+    },
+    "orders": [
+        {
+            "code": "34524",
+            "lang": "en",
+            "buyer": {
+                "code": "34589"
+            },
+            "products": [
+                {
+                    "pdf-template": "examples/products",
+                    "name": "Product name",
+                    "unit": "kg",
+                    "quantity": 1.5,
+                    "custom": {
+                        "ingredients": "kamut wheat, sugar, rye, salt, peanuts",
+                        "countries-of-origin": "Poland",
+                        "expiry-days": 365
+                    }
+                },
+                {
+                    "pdf-template": "examples/products",
+                    "name": "Tea",
+                    "unit": "pcs",
+                    "quantity": 1,
+                    "custom": {
+                        "ingredients": "orange peel, ginger, cinnamon, clove, sage, fennel, licorice root, cardamom, black pepper, miniscus root, juniper fruit, ginger root, sars parilla root, coriander, parsley root, saffron root",
+                        "countries-of-origin": "China",
+                        "expiry-days": 30
+                    }
+                }
+            ]
+        },
+        {
+            "code": "34548",
+            "lang": "pl",
+            "buyer": {
+                "code": "34589"
+            },
+            "products": [
+                {
+                    "pdf-template": "examples/products",
+                    "name": "Ciasteczka",
+                    "unit": "kg",
+                    "quantity": 0.15,
+                    "custom": {
+                        "ingredients": "pszenica kamut, cukier, żyto, sól, orzeszki ziemne",
+                        "countries-of-origin": "Polska",
+                        "expiry-days": 365
+                    }
+                },
+                {
+                    "pdf-template": "examples/tickets",
+                    "name": "Yerba Mate",
+                    "unit": "kg",
+                    "quantity": 2,
+                    "custom": {
+                        "ingredients": "skórka pomarańczy, imbir, cynamon, goźdźik, szałwia lekarska, koper włoski, korzeń lukrecji, kardamon, czarny pieprz, korzeń miniszka lekarskiego, owoc jałowca, korzeń dźięgielowy, korzeń sarsa parilla, kolendra, nać pietruszki, korzeń szafranu",
+                        "countries-of-origin": "Chiny",
+                        "expiry-days": 30
+                    }
+                },
+                {
+                    "pdf-template": "examples/products",
+                    "name": "Herbata",
+                    "unit": "szt.",
+                    "quantity": 3,
+                    "custom": {
+                        "ingredients": "Herbata zielona Bancha, winogrono liofilizowane, wiśnia liofilizowana, rumianek, werbena cytrynowa, bławatek, aromat",
+                        "countries-of-origin": "Polska",
+                        "expiry-days": 365
+                    }
+                }
+            ]
+        },
+        {
+            "code": "34579",
+            "lang": "en",
+            "buyer": {
+                "code": "412"
+            },
+            "products": [
+                {
+                    "pdf-template": "examples/products",
+                    "name": "Cookies",
+                    "unit": "pcs",
+                    "quantity": 2,
+                    "custom": {
+                        "ingredients": "kamut wheat, sugar, rye, salt, peanuts",
+                        "countries-of-origin": "Poland",
+                        "expiry-days": 365
+                    }
+                }
+            ]
+        }
+    ]
+}
