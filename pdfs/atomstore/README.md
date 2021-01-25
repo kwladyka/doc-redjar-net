@@ -105,4 +105,4 @@ Real example of request: [request-products.json](request-products.json)
 
 Products not connected to any order.
 
-The difference between orders is to not send in request `orders[]` / `code` and `orders[]` / `buyer` fields. While te structure of the code is not representing luck of orders perfeclty it makes code simpler on both sides.
+The difference between orders is to not send in request `orders[] / code`, `orders[] / buyer` and `orders[] / products[] / quantity` fields. While te structure of the code is not representing luck of orders perfeclty it makes code simpler on both sides.

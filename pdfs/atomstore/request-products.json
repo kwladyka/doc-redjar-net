@@ -10,7 +10,6 @@
         "code" : "534",
         "name" : "Product name",
         "unit" : "kg",
-        "quantity" : 1.5,
         "custom" : {
           "31" : "kamut wheat, sugar, rye, salt, peanuts",
           "4" : "Poland"
@@ -20,7 +19,6 @@
         "code" : "7894",
         "name" : "Tea",
         "unit" : "pcs",
-        "quantity" : 1,
         "custom" : {
           "31" : "orange peel, ginger, cinnamon, clove, sage, fennel, licorice root, cardamom, black pepper, miniscus root, juniper fruit, ginger root, sars parilla root, coriander, parsley root, saffron root",
           "4" : "China"
@@ -33,7 +31,6 @@
         "code" : "xyz-12",
         "name" : "Ciasteczka",
         "unit" : "kg",
-        "quantity" : 0.15,
         "custom" : {
           "31" : "pszenica kamut, cukier, żyto, sól, orzeszki ziemne",
           "4" : "Polska"
@@ -43,7 +40,6 @@
         "code" : "xyz-13",
         "name" : "Yerba Mate",
         "unit" : "kg",
-        "quantity" : 2,
         "custom" : {
           "31" : "skórka pomarańczy, imbir, cynamon, goźdźik, szałwia lekarska, koper włoski, korzeń lukrecji, kardamon, czarny pieprz, korzeń miniszka lekarskiego, owoc jałowca, korzeń dźięgielowy, korzeń sarsa parilla, kolendra, nać pietruszki, korzeń szafranu",
           "4" : "Chiny"
